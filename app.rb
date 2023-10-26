@@ -6,9 +6,9 @@ get("/") do
 end
 
 
-get("/process_roll/:num_dice/:sides_dice") do
-  @num_of_dice = params.fetch(":num_dice").to_i
-  @num_of_sides = params.fetch(":sides_dice").to_i
+get("/process_roll") do
+  @num_of_dice = params.fetch("dice").to_i
+  @num_of_sides = params.fetch("sides").to_i
 
   @rolls = []
 
